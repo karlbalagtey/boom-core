@@ -39,6 +39,10 @@
     "minimum-stability" : "dev",
     "prefer-stable": true,
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ],
     }
 }
